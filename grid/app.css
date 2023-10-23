@@ -1,0 +1,96 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* affiche le même rendu que le dossier flex mais en utilisant uniquement grid pour afficher le même résultat */
+
+header {
+    background-color: yellow;
+    color: black;
+    text-align: center;
+}
+
+h1 {
+    font-size: 4rem;
+    font-weight: 100;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+nav {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background-color: orange;
+    color: black;
+}
+
+nav h2 {
+    font-size: 4.5rem;
+    font-weight: 100;
+    text-align: center;
+}
+
+article {
+    display: grid;
+    grid-template-columns: 1fr;
+    background-color: green;
+    gap: 20px;
+    padding: 1rem;
+}
+
+article h2 {
+    font-size: 3rem;
+    font-weight: 100;
+    text-align: center;
+}
+
+.lorem {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 100;
+    background: white;
+    color: black;
+}
+
+footer {
+    background-color: lightblue;
+    text-align: center;
+}
+
+footer h2{
+    font-size: 4rem;
+    font-weight: 100;
+}
+
+@media screen and (min-width: 650px) {
+    article {
+        gap: 50px;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    main {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+    }
+
+    nav {
+        grid-template-columns: 1fr;
+    }
+
+    article {
+        grid-template-columns: 1fr;
+    }
+
+    footer {
+        grid-column: 1 / 3;
+
+    }
+}
